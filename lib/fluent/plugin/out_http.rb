@@ -73,7 +73,7 @@ class Fluent::HTTPOutput < Fluent::Output
   end
 
   def format_url(tag, time, record)
-    @endpoint_url
+    "#{@endpoint_url}{tag}"
   end
 
   def set_body(req, tag, time, record)
